@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Grunt &mdash; Website Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet"  type="text/css" href="fonts/icomoon/style.css">
+    <link rel="stylesheet"  type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet"  type="text/css" href="css/animate.css">
+    <link rel="stylesheet"  type="text/css" href="css/owl.carousel.min.css">
+    <link rel="stylesheet"  type="text/css" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet"  type="text/css" href="css/bootstrap-datepicker.css">
+    
+    
+    <link rel="stylesheet"  type="text/css" href="fonts/flaticon/font/flaticon.css">
+  
+    <link rel="stylesheet"  type="text/css" href="css/aos.css">
+    <link rel="stylesheet"  type="text/css" href="css/jquery.fancybox.min.css">
+    
+    <link rel="stylesheet"  type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/intlTelInput.css">
+    <link rel="stylesheet"  type="text/css" href="css/mult_step.css">
+    
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  
+
+
+  <div class="site-wrap">
+    <section class="multi_step_form">  
+        <form id="msform"> 
+            <!-- Tittle -->
+            <div class="tittle">
+             <h2>Get Services</h2>
+             <p>Unleash your online potential with our digital services</p>
+            </div>
+            <!-- progressbar -->
+            <ul id="progressbar">
+                <li class="active"></li>  
+                <li></li> 
+                <li></li>
+                <li></li>
+            </ul>
+<!-- Personal information -->
+        <fieldset>
+            <div class="row msform">
+                <div class="col">
+                    <div class="input-group">
+                        <label>First Name:<span> *</span></label>
+                        <input type="text" name="f-name" id="f_name" class="form-control invalid" required>
+                        <span class="error_fname"></span>
+                    </div>
+                    <div class="input-group">
+                        <label>E-Mail:<span> *</span></label>
+                        <input type="e-mail" name="e-mail" id="email" class="form-control" required>
+                        <span class="error_email"></span>
+                    </div>
+                    <div class="input-group">
+                        <label>Address Line 1:<span> *</span></label>
+                        <input type="text" name="Address 1" id="ardd1" class="form-control" placeholder="St# 04" required>
+                        <span class="error_address"></span>
+                    </div>
+                    <div class="input-group">
+                        <label for="country">Country:<span> *</span></label>
+                         <select id="country" class="form-select form-control" required>
+                           <option value="">Select Country</option>
+                         </select>
+                         <span class="error_country"></span>
+                     </div>
+                </div>
+                <div class="col">
+                    <div class="input-group">
+                        <label>Last Name:<span> *</span></label>
+                        <input type="text" name="l-name" id="l_name" class="form-control" required>
+                        <span class="error_lname"></span>
+                    </div>
+                    <div class="input-group">
+                        <label>Phone Number:<span> *</span></label>
+                        <input type="tel" name="name" id="phone" class="form-control phone" required>
+                        <span class="error_phone"></span>
+                    </div>
+                    <div class="input-group">
+                        <label>Address Line 2:</label>
+                        <input type="text" name="Address 2" id="ardd2" class="form-control" placeholder="St# 04">
+                    </div>
+                     <div class="input-group">
+                        <label for="State">State:<span> *</span></label>
+                         <select id="state" class="form-select form-control" required>
+                           <option value="">Select State</option>
+                         </select>
+                         <span class="error_State"></span>
+                     </div>
+                </div>
+            </div>
+
+            <button type="button" class="next_fs next action-button">Continue</button>
+        </fieldset>
+<!-- Services form -->
+        <fieldset>
+             <div class="row msform">
+                <div class="col">
+                    <div class="input-group">
+                        <label for="department">Department:<span> *</span></label>
+                        <select name="" id="department" class="form-control form-select">
+                            <option value="">-- Select Department --</option>
+                        </select>
+                        <span class="error_dept"></span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="input-group">
+                        <label for="service">Services:<span> *</span></label>
+                        <select name="" id="service" class="form-control form-select">
+                            <option value="">-- Select Service --</option>
+                        </select>
+                        <span class="error_service"></span>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>Rough Idea:</label>
+                    <input type="file" id="rough_idea" class="form-control" onchange="filevalidation()">
+                    <span id="error_file" class="error"></span>  
+                </div>
+                <div class="input-group">
+                    <label>Write an description of your idea?<span> *</span></label>
+                    <textarea  id="description" rows="5" value="" class="form-control" placeholder="Enter idea description will not long than 150 chartactor">
+                    </textarea>
+                    <span class="error_description"></span>  
+                </div>
+            </div>
+
+            <button type="button" class="action-button previous previous_button">Back</button> 
+            <button type="button" class="next_ss next action-button">Continue</button>
+        </fieldset>
+<!-- payment form -->
+    <fieldset>
+       <div class="row msform">
+            <div class="col-7">
+                <div class="form-group owner input-group">
+                    <label for="owner">Owner<span> *</span></label>
+                    <input type="text" class="form-control" id="owner">
+                    <span class="error_owner"></span>
+                </div>
+            </div>
+            <div class="col-5">
+                <div class="form-group CVV input-group">
+                    <label for="cvv">CVV<span> *</span></label>
+                    <input type="text" class="form-control" id="cvv">
+                    <span class="error_cvv"></span>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-group input-group" id="card-number-field">
+                    <label for="cardNumber">Card Number<span> *</span></label>
+                    <input type="text" class="form-control" id="cardNumber">
+                    <span class="error_cardnumber"></span>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group input-group" id="expiration-date">
+                    <label>Expiration Date<span> *</span></label>
+                    <input id="exp" type="month" name="bday-month" min="2023-1" max="2030-12" class="form-control">
+                    <span class="error_exp"></span>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="form-group text-center" id="credit_cards">
+                    <img src="./images/visa.jpg" id="visa">
+                    <img src="./images/mastercard.jpg" id="mastercard">
+                    <img src="./images/amex.jpg" id="amex">
+                </div>
+            </div>
+            
+       </div>
+       
+            <button type="button" class="action-button previous previous_button">Back</button> 
+            <button type="button" class="next_ts next action-button">Continue</button>
+    </fieldset>
+<!-- Summary -->
+        <fieldset>
+            <div class="col msform">
+                <div id="summary">
+                    <table>
+                        <tr>
+                            <td>Name:</td>
+                            <td class="client_name"></td>
+                        </tr>
+                        <tr>
+                            <td>E-mail:</td>
+                            <td class="client_email"></td>
+                        </tr>
+                        <tr>
+                            <td>Phone Number:</td>
+                            <td class="client_tel"></td>
+                        </tr>
+                        <tr>
+                            <td>Address:</td>
+                            <td class="client_address"></td>
+                        </tr>
+                        <tr>
+                            <td>Department:</td>
+                            <td class="dept"></td>
+                        </tr>
+                        <tr>
+                            <td>Service:</td>
+                            <td class="client_service"></td>
+                        </tr>
+                        <tr>
+                            <td>Rough Idea:</td>
+                            <td class="rough_idea"></td>
+                        </tr>
+                        <tr>
+                            <td>Idea Description:</td>
+                            <td class="description"></td>
+                        </tr>
+                        <tr>
+                            <td>Name:</td>
+                            <td class="client_name"></td>
+                        </tr>
+                        <tr>
+                            <td>Credit Cards Owner:</td>
+                            <td class="card_owner"></td>
+                        </tr>
+                        <tr>
+                            <td>CVV number:</td>
+                            <td class="cvv_number"></td>
+                        </tr>
+                        <tr>
+                            <td>Card Number:</td>
+                            <td class="card_number"></td>
+                        </tr>
+                        <tr>
+                            <td>Expiration Data:</td>
+                            <td class="exp_data"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <button type="button" class="action-button previous previous_button">Back</button> 
+            <button type="submit" class="submit action-button">Submit</button>
+        </fieldset>
+      </div>
+  </div>
+
+  <script src="js/intlTelInput.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="./js/jquery.payform.min.js"></script>
+  <script src="js/stickyfill.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
+  <script src="js/mult_step.js"></script>
+  
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="./js/country-states.js"></script>
+  <script src="./js/services_selecor.js"></script>
+  <script src="./js/form_validation.js"></script>
+  <script src="./js/payment_script.js"></script>
+<script type="text/javascript">
+    
+</script>
+  </body>
+</html>
